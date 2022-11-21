@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - webapp4_mvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/webapp4_mvc.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+          
+            <div class="container-fluid">
+           
+              <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-weight:bold;font-family:monospace">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Claim Managment</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-                                                                                             target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Insurer" asp-action="Index">
+                                    Insurer
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Broker" asp-action="Index">
+                                    Broker
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="User" asp-action="create">
+                                    Claim
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <table class="Entry">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td class="Signup">
+                               <a id="logoutForm" class="nav-link" asp-area="Identity" asp-page="/Account/Login"                                                                                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    Login
+                                </a>
+                            </td>
+                            <td class="Signup">
+                                 <a id="logoutForm" class="nav-link" asp-area="Identity" asp-page="/Account/Register"                                                                                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    Register
+                                </a>
+                            </td>
+                            <td class="Logout">
+                                <a id="logoutForm" class="nav-link" asp-area="Identity" asp-page="/Account/Logout"                                                                                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    Logout
+                                </a>
+                            </td>
+                             <td class="TwoFactor">
+                                <a id="logoutForm" class="nav-link" asp-area="Identity" asp-page="/Account/Manage/TwoFactorAuthentication"                                                                                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                   Manage Account
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+              </nav>
+            </div>
+          
+         <div style="text-align:right!important">
+                <partial name="_LoginPartial"/>
+          </div>     
+     
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  @*  <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - webapp4_mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

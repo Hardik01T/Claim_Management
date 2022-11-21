@@ -1,0 +1,55 @@
+﻿@model Tuple<int,int,int>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@
+<style>
+     .Signup{
+    display: none !important;
+    }
+</style>
+  <div style="margin-top:-35px;font-family:monospace;font-size:larger;margin-left:-110px;font-weight:bold">
+      @ViewBag.Date
+  </div >
+  <br />
+
+  <h3 style="font-family:monospace">SYSTEM DETAILS</h3>
+  <div class="row"style="text-align:center;margin-top:10px;border:double;border-color:black;border-radius:20px;border; padding:20px">
+    <div class="col"style="background-color:#9fe4b1de;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      CLOSED CLAIMS=@Model.Item1
+    </div>
+    <div class="col"style="background-color:#9fe4b1de;margin-inline:1em;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      TOTAL CLAIMS=@Model.Item2
+    </div>
+    <div class="col" style="background-color:#9fe4b1de;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      TODAYS CLAIMS=@Model.Item3
+    </div>
+    
+  </div>
+  @*  <div style="margin-top:-35px;font-family:monospace;font-size:larger;margin-left:-110px;font-weight:bold">
+      @ViewBag.Date
+  </div>*@
+  <br />
+  <h3 style="font-family:monospace">USER DETAILS</h3>
+  
+  <div class="row"style="text-align:center;margin-top:30px;border:double;border-radius:20px;padding:30px">
+    <div class="col"style="background-color:#9fe4b1de;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      CLOSED CLAIMS=@Model.Item1
+    </div>
+    <div class="col"style="background-color:#9fe4b1de;margin-inline:1em;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      TOTAL CLAIMS=@Model.Item2
+    </div>
+    <div class="col" style="background-color:#9fe4b1de;font-weight:bold;padding:60px;font-family:monospace;border-radius:20px">
+      TODAYS CLAIMS=@Model.Item3
+    </div>
+    
+  </div>
+  
+  

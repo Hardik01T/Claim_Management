@@ -1,0 +1,73 @@
+﻿@model IEnumerable<webapp4_mvc.Models.Broker>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<style>
+     .Signup{
+    display: none !important;
+    }
+</style>
+<h3 style="color:black ;text-align:center">List of all brokers</h3>
+
+<p> 
+    <div>
+    <a class="btn btn-outline-primary" asp-action="Create">Create New</a>
+ @*   <a asp-action="Create">Create New</a>*@
+    </div>
+</p>
+<table class="table" style="font-family:monospace">
+    <thead>
+        <tr>
+            <th>
+              
+                @Html.DisplayNameFor(model => model.BrokerId)
+              
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdjestorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrokerName)
+            </th>
+            <th style="padding-left:70px"> 
+               Actions
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                  @*<input type="checkbox">*@
+                  @*<div 
+                      class="form-check">
+                      <input type="radio" class="form-check-input" id="radio1"                                                                              name="optradio"value=item.BrokerId checked>
+                       @Html.DisplayFor(modelItem => item.BrokerId) 
+                        <label class="form-check-label" for="radio1">
+
+                        </label>
+                 </div>*@
+                @Html.DisplayFor(modelItem => item.BrokerId) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdjestorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrokerName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.BrokerId}) |
+                @Html.ActionLink("Details", "Details", new { id=item.BrokerId }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.AdjestorId  })
+            </td>
+        </tr>
+}
+
+</table>
+  <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+          @*  <button id="logout" type="submit" class="nav-link btn btn-link text-dark">Logout</button>*@
+    </form>

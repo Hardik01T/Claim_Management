@@ -1,0 +1,214 @@
+﻿@model IEnumerable<webapp4_mvc.Models.Createmvc>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+     .Signup{
+    display: none !important;
+    }
+</style>
+<div>
+    <br />
+    <br>
+    <a asp-action="Create">
+        <button class="btn btn-outline-primary">create new</button>
+    </a>
+    @*   <a asp-action="Create">
+    <button class="btn-primary">Insurer</button>
+    </a>
+    <a asp-action="Create">
+    <button class="btn-primary">Create</button>
+    </a>
+    </div>*@
+    <h3 style="text-align:center;color:blueviolet">List of previous user who filed claim</h3>
+    <table class="table" style="margin:auto;width:10px,!important">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InsuredClaimNo)
+                </th>
+                @*  <th>
+                @Html.DisplayNameFor(model => model.InsuredContactedDate)
+                </th>*@
+                @* <th>
+                @Html.DisplayNameFor(model => model.ClaimTypeCode)
+                </th>*@
+                @*  <th>
+                @Html.DisplayNameFor(model => model.LossDescCode)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.InsurerId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Period)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LossLocation)
+                </th>
+                @* <th>
+                @Html.DisplayNameFor(model => model.LossDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.ReceiveDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.OpenDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.CloseDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.PolicyInceptionDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.PolicyExpiryDate)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Taxable)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.InsuredFirstName)
+                </th>*@
+              @*  <th>
+                    @Html.DisplayNameFor(model => model.OrganizationCode)
+                </th>*@
+                @* <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                @Html.DisplayNameFor(model => model.LastChangedBy)
+                </th>*@
+                @*<th>
+                @Html.DisplayNameFor(model => model.LastChanged)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.PolicyNumber)
+                </th>
+                @*<th>
+                @Html.DisplayNameFor(model => model.ClaimedAmount)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.BrokerId)
+                </th>
+                @* <th>
+                @Html.DisplayNameFor(model => model.AdjestorId)
+                </th>
+                *@
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsuredName)
+                    </td>
+                    <td style="padding-left:70px">
+                        @Html.DisplayFor(modelItem => item.InsuredClaimNo)
+                    </td>
+                    @* <td>
+                @Html.DisplayFor(modelItem => item.InsuredContactedDate)
+                </td>*@
+                    @* <td>
+                @Html.DisplayFor(modelItem => item.ClaimTypeCode)
+                </td>*@
+                    @* <td>
+                @Html.DisplayFor(modelItem => item.LossDescCode)
+                </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InsurerId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Period)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LossLocation)
+                    </td>
+                    @*<td>
+                @Html.DisplayFor(modelItem => item.LossDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.ReceiveDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.OpenDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.CloseDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.PolicyInceptionDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.PolicyExpiryDate)
+                </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Taxable)
+                    </td>
+                   @* <td>
+                        @Html.DisplayFor(modelItem => item.InsuredFirstName)
+                    </td>*@
+                  @*  <td>
+                        @Html.DisplayFor(modelItem => item.OrganizationCode)
+                    </td>*@
+                    @*<td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.LastChangedBy)
+                </td>*@
+                    @*<td>
+                @Html.DisplayFor(modelItem => item.LastChanged)
+                </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PolicyNumber)
+                    </td>
+                    @*  <td>
+                @Html.DisplayFor(modelItem => item.ClaimedAmount)
+                </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BrokerId)
+                    </td>
+                    @* <td>
+                @Html.DisplayFor(modelItem => item.AdjestorId)
+                </td>*@
+                    @*<td>
+                yo
+                @Html.DisplayFor(modelItem => item.BrokerName)
+                </td>*@
+                 <td>
+                     @Html.ActionLink("Details", "Details", new { id=item.Id })|
+                     @Html.ActionLink("Edit", "Edit", new { id=item.Id })|
+                     @Html.ActionLink("Delete", "Delete", new { id=item.Id})|
+                 </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>

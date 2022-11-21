@@ -1,0 +1,58 @@
+﻿@model IEnumerable<webapp4_mvc.Models.Insurer_mvc>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+     .Signup{
+    display: none !important;
+    }
+</style>
+
+<h1 style="text-align:center;font-family:monospace">List of Insurer</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary">Create New</a>
+</p>
+<table class="table" style="font-family:monospace">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.InsurerId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrganizationCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PolicyNumber)
+            </th>
+             <th style="padding-left:70px">
+                Actions
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                
+                @Html.DisplayFor(modelItem => item.InsurerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrganizationCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PolicyNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.InsurerId }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.InsurerId }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.InsurerId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
