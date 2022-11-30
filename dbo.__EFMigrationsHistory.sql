@@ -1,7 +1,7 @@
-USE [Claims]
+USE [IdentityData]
 GO
 
-/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 11/30/2022 5:47:15 PM ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 11/30/2022 4:27:25 PM ******/
 SET ANSI_NULLS ON
 GO
 
