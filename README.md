@@ -15,3 +15,6 @@ After testing api completely on postman  I create new mvc application and called
 Then similarly I create 4 controllers in mvc which are used for consuming the  information from api using  get and post request to api which result in sending the the data filled by user to api and then api to database as our database is connected to api not with mvc ,perform various task on mvc like creating dropdown list creating various form ,redirection of forms ,routing and bringing various information on dash bord and many more these  all task are listed in exel sheet which me and my mentor had maintained during training sessions . Then comes designing part which is done through the views of mvc .
 
 And for login purpose implemented identity server.
+<!-- <img src="readme-files/ss.png"> -->
+
+![screenshot](./readme-files/ss.png)
